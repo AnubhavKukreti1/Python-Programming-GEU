@@ -8,6 +8,7 @@ Topics Covered
 Data Types in Python
 Functions in Python
 Loops in Python
+Dictionaries in Python
 Object-Oriented Programming (OOP) in Python
 
 Along with learning these concepts, I have also solved basic practice questions to strengthen my understanding and improve my problem-solving skills.
@@ -23,6 +24,9 @@ Python-Programming-GEU/
 │
 ├── Loops/
 │   └── Programs and practice questions related to Python loops
+│
+├── Dictionary/
+│   └── Programs and practice questions related to Python dictionaries
 │
 └── OOP/
     └── Programs and practice questions related to Object-Oriented Programming
