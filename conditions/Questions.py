@@ -19,32 +19,32 @@ If baggage weight is more than 20 kg but up to 30 kg, charge ₹1,000.
 If baggage weight is more than 30 kg, charge ₹1,000 + ₹200 for every kg above 30 kg.
 Display the flight type, baggage weight and total extra baggage charges.
 """
-# flight = input("Enter flight type (Domestic/International): ")
-# weight = float(input("Enter baggage weight in kg: "))
+flight = input("Enter flight type (Domestic/International): ")
+weight = float(input("Enter baggage weight in kg: "))
 
-# if flight == "Domestic":
-#     if weight <= 15:
-#         charge = 0
-#     elif weight <= 25:
-#         charge = 500
-#     else:
-#         charge = 500 + (weight - 25) * 100
+if flight == "Domestic":
+    if weight <= 15:
+        charge = 0
+    elif weight <= 25:
+        charge = 500
+    else:
+        charge = 500 + (weight - 25) * 100
 
-# elif flight == "International":
-#     if weight <= 20:
-#         charge = 0
-#     elif weight <= 30:
-#         charge = 1000
-#     else:
-#         charge = 1000 + (weight - 30) * 200
+elif flight == "International":
+    if weight <= 20:
+        charge = 0
+    elif weight <= 30:
+        charge = 1000
+    else:
+        charge = 1000 + (weight - 30) * 200
 
-# else:
-#     charge = -1
+else:
+    charge = -1
 
-# if charge == -1:
-#     print("Invalid flight type")
-# else:
-#     print("Extra baggage charges:", charge)
+if charge == -1:
+    print("Invalid flight type")
+else:
+    print("Extra baggage charges:", charge)
   
 
 """
@@ -64,22 +64,22 @@ If consumption exceeds 1,000 litres, an additional fixed charge of ₹500 is app
 Display the total water bill.
 """
 
-# water = float(input("Enter water consumption in litres : "))
+water = float(input("Enter water consumption in litres : "))
 
-# if water <= 100:
-#   bill = 0
-# elif water <= 200:
-#   bill = (water - 100) * 2 
+if water <= 100:
+  bill = 0
+elif water <= 200:
+  bill = (water - 100) * 2 
 
-# elif water <= 500:
-#   bill = 100 * 2 + (water - 200) * 3
-# else :
-#   bill = 100 * 2 + 300 * 3 + (water - 500) * 5
+elif water <= 500:
+  bill = 100 * 2 + (water - 200) * 3
+else :
+  bill = 100 * 2 + 300 * 3 + (water - 500) * 5
 
-#   if water > 1000:
-#     bill = bill + 500
+  if water > 1000:
+    bill = bill + 500
 
-# print("Total Water bill : ", bill)
+print("Total Water bill : ", bill)
 
 
 
@@ -99,21 +99,21 @@ If consumption is more than 1,000 units, add another ₹500 surcharge.
 Display the final electricity bill.
 """
 
-# units = float(input("Enter the Units consumed : "))
+units = float(input("Enter the Units consumed : "))
 
-# if units <= 100:
-#   charge = 0
-# elif units <= 200:
-#   charge = (units - 100) * 2
-# elif units <= 500:
-#   charge = 100 * 2 + (units - 200) * 3
-# else:
-#   charge = (100 * 2 + 300 * 3 + (units - 500) * 5) + 200
+if units <= 100:
+  charge = 0
+elif units <= 200:
+  charge = (units - 100) * 2
+elif units <= 500:
+  charge = 100 * 2 + (units - 200) * 3
+else:
+  charge = (100 * 2 + 300 * 3 + (units - 500) * 5) + 200
 
-#   if units > 1000:
-#     charge = charge + 500
+  if units > 1000:
+    charge = charge + 500
 
-# print("Total Bill : ", charge)
+print("Total Bill : ", charge)
 
 """
 4. 🏨 Hotel Room Charges
@@ -137,50 +137,50 @@ If the total bill after discount exceeds ₹20,000, add a luxury tax of 5%.
 Calculate and display the final bill.
 """
 
-# room = input("Enter the room type (Standard/Deluxe/Suite): ")
-# stay = int(input("Enter the duration of stay: "))
+room = input("Enter the room type (Standard/Deluxe/Suite): ")
+stay = int(input("Enter the duration of stay: "))
 
-# if room == "Standard":
-#     cost = 2000
+if room == "Standard":
+    cost = 2000
 
-# elif room == "Deluxe":
-#     cost = 3500
+elif room == "Deluxe":
+    cost = 3500
 
-# elif room == "Suite":
-#     cost = 5000
+elif room == "Suite":
+    cost = 5000
 
-# else:
-#     print("Invalid room type")
-#     cost = 0
+else:
+    print("Invalid room type")
+    cost = 0
 
-# if cost != 0:
+if cost != 0:
 
-#     total = cost * stay
+    total = cost * stay
 
-#     # Discount
-#     if stay <= 2:
-#         discount = 0
+    # Discount
+    if stay <= 2:
+        discount = 0
 
-#     elif stay <= 5:
-#         discount = total * 0.10
+    elif stay <= 5:
+        discount = total * 0.10
 
-#     else:
-#         discount = total * 0.20
+    else:
+        discount = total * 0.20
 
-#     bill = total - discount
+    bill = total - discount
 
-#     # Room service
-#     service = input("Do you want room service? (Yes/No): ")
+    # Room service
+    service = input("Do you want room service? (Yes/No): ")
 
-#     if service == "Yes":
-#         bill = bill + (500 * stay)
+    if service == "Yes":
+        bill = bill + (500 * stay)
 
-#     # Luxury tax
-#     if bill > 20000:
-#         tax = bill * 0.05
-#         bill = bill + tax
+    # Luxury tax
+    if bill > 20000:
+        tax = bill * 0.05
+        bill = bill + tax
 
-#     print("Final bill:", bill)
+    print("Final bill:", bill)
 
 
 
@@ -203,40 +203,40 @@ If the final bill is above ₹10,000, add ₹200 delivery charges.
 Display the final payable amount.
 """
 
-# bill = float(input("Enter the total shopping bill: "))
-# premium_member = input("Are you a premium member? (y/n): ")
+bill = float(input("Enter the total shopping bill: "))
+premium_member = input("Are you a premium member? (y/n): ")
 
-# if bill < 1000:
-#     discount = 0
+if bill < 1000:
+    discount = 0
 
-# elif bill < 5000:
-#     discount = bill * 0.05
+elif bill < 5000:
+    discount = bill * 0.05
 
-# elif bill < 10000:
-#     discount = bill * 0.10
+elif bill < 10000:
+    discount = bill * 0.10
 
-# else:
-#     discount = bill * 0.20
-
-
-# if premium_member == "y":
-#     discount = discount + (bill * 0.05)
+else:
+    discount = bill * 0.20
 
 
-# final_bill = bill - discount
+if premium_member == "y":
+    discount = discount + (bill * 0.05)
 
 
-# if final_bill < 500:
-#     total_bill = final_bill + 50
-
-# elif final_bill > 10000:
-#     total_bill = final_bill + 200
-
-# else:
-#     total_bill = final_bill
+final_bill = bill - discount
 
 
-# print("Total Amount:", total_bill)
+if final_bill < 500:
+    total_bill = final_bill + 50
+
+elif final_bill > 10000:
+    total_bill = final_bill + 200
+
+else:
+    total_bill = final_bill
+
+
+print("Total Amount:", total_bill)
 
 
 
@@ -259,6 +259,35 @@ If the total distance is more than 50 km, give a 10% discount on the basic fare.
 Display the final taxi fare.
 """
 
+distance = int(input("Enter the distance travelled: "))
+
+time = input("Enter the time of travelling (night/day): ")
+day = input("Enter the day: ")
+
+
+if distance <= 5:
+    cost = 100
+
+elif distance <= 15:
+    cost = 100 + (distance - 5) * 15
+
+else:
+    cost = 100 + (10 * 15) + (distance - 15) * 20
+
+
+if distance > 50:
+    cost = cost - (cost * 0.10)
+
+
+if time == "night":
+    cost = cost + (cost * 0.20)
+
+
+if day == "Sunday":
+    cost = cost + 50
+
+print("Final Taxi Fare:", cost)
+
 
 
 
@@ -278,6 +307,33 @@ If the customer is a premium user, give 10% discount.
 If usage exceeds 20 GB, add an additional ₹100 heavy-usage charge.
 Display the final bill.
 """
+
+data = int(input("Enter the data usage in GB: "))
+premium = input("Are you a premium user? (y/n): ")
+
+if data <= 2:
+    bill = 199
+
+elif data <= 5:
+    bill = 299
+
+elif data <= 10:
+    bill = 499
+
+else:
+    bill = 499 + (data - 10) * 50
+
+# Premium discount
+if premium == "y":
+    bill = bill - (bill * 0.10)
+
+# Heavy usage charge
+if data > 20:
+    bill = bill + 100
+
+print("Final Internet Bill:", bill)
+
+
 
 """
 8. 🎓 Student Scholarship — Good Conditional Practice
@@ -306,6 +362,25 @@ Otherwise, the student is not eligible.
 Additionally, if percentage ≥ 95 and attendance ≥ 95%, display "Special Merit Scholarship".
 """
 
+percentage = float(input("Enter percentage: "))
+attendance = float(input("Enter attendance percentage: "))
+income = float(input("Enter family income: "))
+
+# Special Merit Scholarship
+if percentage >= 95 and attendance >= 95:
+    print("Special Merit Scholarship")
+
+# Scholarship eligibility
+if percentage >= 90 and attendance >= 90 and income <= 300000:
+    print("100% Scholarship")
+elif percentage >= 80 and attendance >= 75 and income <= 500000:
+    print("50% Scholarship")
+else:
+    print("Not Eligible for Scholarship")
+
+
+
+
 """
 9. 🏦 Bank Loan Eligibility — 🔥
 Question:
@@ -329,6 +404,24 @@ If existing loan is between ₹2,00,000 and ₹5,00,000 → Loan Approved with c
 If existing loan is above ₹5,00,000 → Loan Rejected
 Otherwise → Not Eligible.
 """
+
+age = int(input("Enter your age : "))
+monthly_salary = float(input("Enter your monthly salary : "))
+credit_score = float(input("Enter your credit score : "))
+Existing_loan_amount = float(input("Enter the existing loan amount : "))
+
+if 21 <= age <= 60 and salary >= 30000 and credit_score >= 700:
+  if Existing_loan_amount <= 200000:
+    print("Loan Approved")
+  elif Existing_loan_amount <= 500000:
+    print("Loan approved with conditions.")
+  else:
+    print("Loan Rejected.")
+
+else:
+    print("Non Eligible") 
+
+
 
 """
 10. 🏥 Hospital Bill — 🔥🔥
@@ -356,3 +449,44 @@ If patient is a senior citizen (age ≥ 60) → 10% discount on the final bill.
 If the final bill exceeds ₹2,00,000 → add 5% medical service tax.
 Calculate the final amount payable.
 """
+
+
+patient_type = input("Enter patient type (General/Private): ")
+days = int(input("Enter number of days: "))
+treatment_cost = float(input("Enter treatment cost: "))
+age = int(input("Enter patient age: "))
+
+# Calculate room charges
+if patient_type.lower() == "general":
+    room_charge = 1000 * days
+elif patient_type.lower() == "private":
+    room_charge = 3000 * days
+else:
+    print("Invalid patient type")
+    exit()
+
+# Calculate treatment discount
+if treatment_cost < 50000:
+    discount = 0
+elif treatment_cost <= 100000:
+    discount = treatment_cost * 0.05
+else:
+    discount = treatment_cost * 0.10
+
+# Amount after treatment discount
+bill = treatment_cost - discount + room_charge
+
+# Additional charge for stay exceeding 10 days
+if days > 10:
+    bill += 5000
+
+# Senior citizen discount
+if age >= 60:
+    bill = bill * 0.90
+
+# Medical service tax
+if bill > 200000:
+    bill = bill * 1.05
+
+print("Final Amount Payable: ₹", bill)
+
