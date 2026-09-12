@@ -64,3 +64,12 @@
 #   reverse = reverse * 10 + digit
 #   num //= 10 
 # print(reverse)   
+
+
+# Print each character of a string using a for loop.
+
+text = input("Enter a string: ")
+
+for char in text:
+    print(char)
+
