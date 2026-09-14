@@ -88,4 +88,4 @@ New topics, exercises, challenges, and projects will be added over time as I pro
 
 This repository represents my progress from learning the fundamentals, practicing different concepts, solving tricky problems, and gradually becoming a better, more confident, and consistent Python programmer.
 
-Every program, question, and problem I add is another step forward in my programming journey. 🐍💻
+Every program, question, and problem I add is another step forward in my programming journey. 
