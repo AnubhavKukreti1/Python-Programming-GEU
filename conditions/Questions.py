@@ -490,3 +490,37 @@ if bill > 200000:
 
 print("Final Amount Payable: ₹", bill)
 
+# GEU LAB QUESTIONS :
+
+# Question 1:
+
+a = int(input("Enter a nunber : "))
+
+if num > 0:
+    print("The number is positive.")
+
+else:
+    print("The number is negtive.")
+
+# Question 2:
+
+num = int(input("Enter a number : "))
+
+if num % 2 == 0:
+    print("The number is even.")
+
+else :
+    print("The number is odd.")
+
+# Question 3:
+
+age = int(input("Enter your age."))
+
+if age >= 18 :
+
+    print("You can vote.")
+
+else: 
+    
+    print("You can not vote.")
+
