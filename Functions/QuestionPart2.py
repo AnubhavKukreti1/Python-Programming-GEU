@@ -103,3 +103,109 @@ def calculate_bonuses(employees):
 
 
 print(calculate_bonuses(employees))
+
+
+
+""" Problem
+You receive transactions:
+
+transactions = [
+    ("deposit", 5000),
+    ("withdraw", 2000),
+    ("withdraw", 4000),
+    ("deposit", 3000)
+]
+
+Write a function that calculates the final balance.
+
+Rules:
+
+Withdrawal should not be allowed if there isn't enough balance.
+
+Invalid transaction types should be ignored.
+
+The function should return both the balance and failed transactions. """
+
+
+
+def process_transactions(transactions, initial_balance=0) :
+  balance = initial_balance
+  failed = [] 
+
+  for transaction , amount in transactions :
+
+    if amount < 0 :
+      failed.append((transaction , amount))
+      continue
+
+    if transaction == "deposit" :
+      balance += amount 
+
+    elif transaction == "withdraw" :
+      if amount <= balance :
+        balance -= amount
+      else :
+        failed.append((transaction , amount))
+
+    else :
+
+      failed.append((transaction , amount))
+
+  return balance , failed 
+
+transactions = [
+    ("deposit", 5000),
+    ("withdraw", 2000),
+    ("withdraw", 4000),
+    ("deposit", 3000)
+]
+
+
+print(process_transactions(transactions))
+
+"""
+Problem
+Create a function that tracks failed login attempts.
+
+Rules:
+
+Correct password → "Login successful"
+
+Incorrect password → increase failed attempts.
+
+After 3 failures → "Account locked"
+
+The tricky part: the function needs to remember previous attempts between calls. """
+
+
+def create_login_system(correct_password):
+    attempts = 0
+    locked = False
+
+    def login(password):
+        nonlocal attempts, locked
+
+        if locked:
+            return "Account locked"
+
+        if password == correct_password:
+            attempts = 0
+            return "Login successful"
+
+        attempts += 1
+
+        if attempts >= 3:
+            locked = True
+            return "Account locked"
+
+        return f"Wrong password. Attempts left: {3 - attempts}"
+
+    return login
+
+
+login = create_login_system("python123")
+
+print(login("abc"))
+print(login("xyz"))
+print(login("hello"))
+print(login("python123"))
