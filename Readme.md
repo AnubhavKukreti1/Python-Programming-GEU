@@ -1,81 +1,77 @@
-# <p align="center">🐍 Python Programming Journey 🐍</p>
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-Python%203-blue?style=for-the-badge&logo=python&logoColor=yellow" alt="Python">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-success?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/Focus-Problem%20Solving%20%7C%25%20OOP%20%7C%25%20Projects-orange?style=for-the-badge" alt="Focus">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20,30&height=180&section=header&text=Python%20Programming%20Journey&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=One%20Program.%20One%20Problem.%20One%20Concept%20at%20a%20Time.&descSize=15&descAlignY=62" width="100%"/>
 </p>
 
-> *"One Program. One Problem. One Concept at a Time."*
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=yellow" />
+  <img src="https://img.shields.io/badge/Status-Actively%20Building-FF6F61?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Focus-Logic%20%7C%20OOP%20%7C%20Projects-6C5CE7?style=for-the-badge&logo=codepen&logoColor=white" />
+</p>
 
 ---
 
-## 🌟 Welcome!
+## ✨ Overview
 
-This repository documents my structured learning journey as I build a rock-solid foundation in Python programming through consistent practice, problem-solving, code experiments, and practical projects. 
+Welcome to my **Python Programming Repository**! This space documents my structured learning journey as I build a rock-solid foundation through consistent practice, code experiments, and practical real-world projects.
 
-My goal is to learn by coding, strengthen my logical thinking, understand Python concepts deeply, and gradually progress from fundamental basics to advanced programming.
+> 💡 **Core Philosophy:** *Turn theoretical knowledge into practical programming experience through code execution, trial, and continuous refinement.*
 
 ---
 
-## 📚 Topics Covered
+## 📚 Topics & Concepts Covered
 
-| Category | Description | Key Focus Areas |
+<details>
+<summary><b>📂 Click to expand & view all covered modules</b></summary>
+
+| Module | Focus Area | Key Highlights |
 | :--- | :--- | :--- |
-| **🔹 Data Types** | Built-in structures & operations | Numbers, Strings, Lists, Tuples, Sets, Dictionaries, Type Conversion |
-| **🔹 Conditions** | Decision-making logic | `if`, `elif`, `else`, Nested conditions, Logical & Comparison operators |
-| **🔹 Functions** | Reusable blocks of code | Definitions, Parameters, Arguments, Return values, Problem breakdown |
-| **🔹 Loops** | Repetitive tasks & iteration | `for` & `while` loops, Transactions, Inventory management, Fares |
-| **🔹 Tuples** | Immutable sequence structures | Indexing, Slicing, Methods, Unpacking, Practical use cases |
-| **🔹 Dictionaries** | Structured key-value storage | Modifying values, Iteration, Methods, Dictionary-based logic |
-| **🔹 OOP** | Object-Oriented Programming | Classes, Objects, Constructors, Attributes, Methods, Instance variables |
-| **🧠 Tricky Qs** | Deepening core understanding | Output-based questions, Logic puzzles, Hidden Python behaviors |
+| **🔹 DataTypes** | Built-in data structures | Numbers, Strings, Lists, Tuples, Sets, Dictionaries, Type Casting |
+| **🔹 Conditions** | Decision-making logic | `if`, `elif`, `else`, Nested blocks, Comparison & Logical operators |
+| **🔹 Functions** | Modular & reusable code | Definitions, Parameters, Arguments, Return values, Problem breakdown |
+| **🔹 Loops** | Repetitive iteration | `for` & `while` loops, Transactions, Inventory management, Fares |
+| **🔹 Tuples** | Immutable sequences | Slicing, Methods, Unpacking, Safe data management |
+| **🔹 Dictionaries** | Key-value mapping | Data lookup, Iteration, Structural organization |
+| **🔹 OOP** | Object-Oriented paradigms | Classes, Objects, Constructors, Methods, Instance variables |
+| **🧠 Tricky Qs** | Deep code analysis | Output-based puzzles, Hidden edge cases, Python behavior nuances |
+
+</details>
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured Mini-Projects
 
-I combine individual concepts into fully functional, real-world mini-projects:
-
-### 🎰 1. Jackpot Number
-* **Concepts Used:** Variables, Data types, Conditional statements, Loops, User input, Randomization.
-* **Goal:** A number-guessing game designed to blend control flow and random generation into an interactive program.
-
-### 📝 2. To-Do List
-* **Concepts Used:** Lists, Loops, Conditionals, Functions, User input.
-* **Goal:** A practical task management utility to handle adding, removing, and displaying tasks dynamically.
+<table align="center">
+  <tr>
+    <td width="50%" align="center">
+      <h3>🎰 Jackpot Number</h3>
+      <p>A number-guessing game utilizing random generation, loops, and conditional feedback loops.</p>
+      <p><b>Tech Stack:</b> Loops • Conditionals • Random Module</p>
+    </td>
+    <td width="50%" align="center">
+      <h3>📝 To-Do List</h3>
+      <p>A practical command-line task manager to handle dynamic task addition, removal, and listing.</p>
+      <p><b>Tech Stack:</b> Lists • Functions • User Input Control</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 📂 Repository Structure
+## 📂 Repository Architecture
 
 ```text
 Python-Programming-GEU/
 │
 ├── 📁 DataTypes/          # Built-in data types & basic operations
-├── 📁 Conditions/         # Conditional statements & decision-making
-├── 📁 Functions/          # Reusable code blocks & modular logic
-├── 📁 Loops/              # For/While loops & real-world scenarios
+├── 📁 Conditions/         # Conditional logic & decision-making trees
+├── 📁 Functions/          # Modular code blocks & scoping practice
+├── 📁 Loops/              # Iterative problem-solving & logical sets
 │   ├── ForLoopLogicalQuestions.py
 │   └── WhileLoopLogicalQuestions.py
-├── 📁 Tuples/             # Immutable data structures
-├── 📁 Dictionary/         # Key-value data processing
-├── 📁 OOP/                # Classes, objects, & methods
+├── 📁 Tuples/             # Immutable data management
+├── 📁 Dictionary/         # Mapped key-value logic systems
+├── 📁 OOP/                # Object-Oriented design patterns
 ├── 📁 Projects/           
-│   ├── 📁 Jackpot-Number/ # Number-based guessing game
-│   └── 📁 To-Do-List/     # Task management utility
-└── 📁 Tricky-Questions/   # Brain teasers & unexpected behaviors
-```
-
-
-  [ Learn Concept ] 
-         ↓
-  [ Practice Syntax ] 
-         ↓
-  [ Solve Logical Problems ] 
-         ↓
-  [ Combine Multiple Concepts ] 
-         ↓
-  [ 🚀 Build a Project ] 
-         ↓
-  [ Refine & Improve ]
+│   ├── 📁 Jackpot-Number/ # Interactive guessing game
+│   └── 📁 To-Do-List/     # Dynamic task manager utility
+└── 📁 Tricky-Questions/   # Edge-case puzzles & quirky behaviors
