@@ -65,3 +65,15 @@ Python-Programming-GEU/
 │   ├── 📁 Jackpot-Number/ # Number-based guessing game
 │   └── 📁 To-Do-List/     # Task management utility
 └── 📁 Tricky-Questions/   # Brain teasers & unexpected behaviors
+
+[ Learn Concept ] 
+         ↓
+  [ Practice Syntax ] 
+         ↓
+  [ Solve Logical Problems ] 
+         ↓
+  [ Combine Multiple Concepts ] 
+         ↓
+  [ 🚀 Build a Project ] 
+         ↓
+  [ Refine & Improve ]
