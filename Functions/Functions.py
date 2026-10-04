@@ -128,6 +128,41 @@ Experience below 3 years → 0% increment.
 Do not modify the original employee list.
 """
 
+employees = [
+    {"name": "A", "salary": 50000, "experience": 6},
+    {"name": "B", "salary": 40000, "experience": 2},
+    {"name": "C", "salary": 70000, "experience": 10}
+]
+
+def calculate_salaries(employees):
+  result = []
+
+  for employee in employees:
+    salary = employee["salary"]
+    experience = employee["experience"]
+
+    if experience >= 8 :
+      increment = 0.20
+    elif experience >= 5 :
+      increment = 0.12
+    elif experience >= 3 :
+      increment = 0.07 
+    else :
+      increment = 0 
+
+    new_salary = salary * (1 + increment)
+
+    result.append({
+      "name" : employee["name"],
+      "new_salary": new_salary
+    })
+
+  return result
+
+print(calculate_salaries(employees))
+
+
+
 
 """ Problem 3
 You receive a list of bank transactions:
