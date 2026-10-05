@@ -260,6 +260,33 @@ Out of stock → stock equal to 0
 Return the product names rather than the complete dictionaries.
 """
 
+products = [
+    {"name": "Laptop", "stock": 5},
+    {"name": "Mouse", "stock": 20},
+    {"name": "Keyboard", "stock": 0},
+    {"name": "Monitor", "stock": 3}
+]
+
+def analyze_inventory(products):
+  available = []
+  low_stock = []
+  out_of_stock = []
+
+  for product in products:
+    name = product["name"]
+    stock = product["stock"]
+
+    if stock > 5:
+      available.append(name)
+    elif stock >= 1:
+      low_stock.append(name)
+    else:
+      out_of_stock.append(name)
+
+  return available, low_stock, out_of_stock
+
+print(analyze_inventory(products))
+
 
 """ Problem 5
 You are creating a student result system.
