@@ -197,6 +197,39 @@ Return both:
 The function should also accept an optional initial_balance parameter.
 """
 
+transactions = [
+    ("deposit", 10000),
+    ("withdraw", 3000),
+    ("withdraw", 9000),
+    ("deposit", 5000),
+    ("transfer", 2000),
+    ("withdraw", -500)
+]
+
+def calculate_balance(transactions, initial_balance=0):
+  balance = initial_balance
+  failed_transactions = []
+
+  for transaction in transactions:
+    transaction_type, amount = transaction
+
+    if amount < 0:
+      failed_transactions.append(transaction)
+      continue
+
+    if transaction_type == "deposit":
+      balance += amount
+    elif transaction_type == "withdraw":
+      if balance >= amount:
+        balance -= amount
+      else:
+        failed_transactions.append(transaction)
+    else:
+      failed_transactions.append(transaction)
+
+  return balance, failed_transactions
+
+print(calculate_balance(transactions, initial_balance=5000))
 
 """ Problem 4
 You are managing product inventory.
