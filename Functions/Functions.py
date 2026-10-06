@@ -478,6 +478,73 @@ Use a nested function and nonlocal where appropriate.
 """
 
 
+def create_atm(initial_balance, correct_pin):
+
+    balance = initial_balance
+    pin = correct_pin
+    failed_attempts = 0
+    locked = False
+
+    def atm(operation, amount=0, entered_pin=None, new_pin=None):
+        nonlocal balance, pin
+        nonlocal failed_attempts, locked
+
+        if locked:
+            return "Account locked"
+
+        if entered_pin != pin:
+            failed_attempts += 1
+
+            if failed_attempts >= 3:
+                locked = True
+                return "Account locked"
+
+            return "Incorrect PIN"
+
+        failed_attempts = 0
+
+        if operation == "balance":
+            return balance
+
+        elif operation == "deposit":
+            if amount <= 0:
+                return "Invalid amount"
+
+            balance += amount
+            return balance
+
+        elif operation == "withdraw":
+            if amount <= 0:
+                return "Invalid amount"
+
+            if amount > balance:
+                return "Insufficient balance"
+
+            balance -= amount
+            return balance
+
+        elif operation == "change_pin":
+            pin = new_pin
+            return "PIN changed successfully"
+
+        else:
+            return "Invalid operation"
+
+    return atm
+
+
+atm = create_atm(10000, 1234)
+
+print(atm("balance", entered_pin=1234))
+print(atm("deposit", 5000, entered_pin=1234))
+print(atm("withdraw", 2000, entered_pin=1234))
+print(atm("balance", entered_pin=1234))
+
+
+
+
+
+
 """ Problem 8
 You are building a library management system.
 
