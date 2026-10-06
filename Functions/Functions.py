@@ -402,6 +402,49 @@ total spending.
 If two categories have the same highest amount, return the first one.
 """
 
+expenses = [
+    ("food", 500),
+    ("travel", 1200),
+    ("food", 300),
+    ("shopping", 2000),
+    ("travel", 800),
+    ("food", 700)
+]
+
+
+def calculate_expenses(expenses):
+    result = {}
+
+    for category, amount in expenses:
+
+        if category in result:
+            result[category] += amount
+        else:
+            result[category] = amount
+
+    return result
+
+
+def highest_expense(expenses):
+    totals = calculate_expenses(expenses)
+
+    highest_category = None
+    highest_amount = 0
+
+    for category, amount in totals.items():
+
+        if amount > highest_amount:
+            highest_amount = amount
+            highest_category = category
+
+    return highest_category
+
+
+print(calculate_expenses(expenses))
+print(highest_expense(expenses))
+
+
+
 
 """ Problem 7
 You are creating a simple ATM system.
