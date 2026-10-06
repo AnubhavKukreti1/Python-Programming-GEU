@@ -330,6 +330,47 @@ percentage
 
 grade
 """
+students = [
+    {"name": "Rahul", "marks": [80, 90, 70]},
+    {"name": "Aman", "marks": [40, 35, 50]},
+    {"name": "Priya", "marks": [95, 92, 88]}
+]
+
+def generate_results(students):
+  results = []
+
+  for student in students:
+    name = student["name"]
+    marks = student["marks"]
+
+    total = sum(marks)
+
+    percentage = total / len(marks)
+
+    if any(mark < 40 for mark in marks):
+      grade = "Fail"
+    else:
+      if percentage >= 90:
+        grade = "A+"
+      elif percentage >= 80:
+        grade = "A"
+      elif percentage >= 70:
+        grade = "B"
+      elif percentage >= 60:
+        grade = "C"
+      else:
+        grade = "D"
+
+    results.append({
+        "name": name,
+        "total": total,
+        "percentage": percentage,
+        "grade": grade
+    })
+
+  return results
+
+print(generate_results(students))
 
 
 """ Problem 6
